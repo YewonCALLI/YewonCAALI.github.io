@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+  canvas {
+    display: block;
+  }
+
+  .page-wrap p {
+    color : gainsboro;
+    text-align: center;
+    vertical-align:middle;
+    font: normal normal bold 62px Pretendard;
+    letter-spacing: 0px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate( -50%,50% );
+    opacity: 1;
+    white-space:nowrap;
+    }  
 h1{
     color:magenta;
     font-family: 'Noto Sans KR', sans-serif;
