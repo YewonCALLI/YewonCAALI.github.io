@@ -21,12 +21,13 @@ function mousePressed(){
 
 
 function draw() {
+	//orbitControl();
     clear();
     blendMode(DIFFERENCE);
 	background(0);
 
     
-    while(j<15){
+    while(j<10){
     let b1 = new Bubble(random(width),random(height),50);
     let c1 = new Circle(random(width),random(height),random(12,18),random(50,60),10,100);
     bubbles.push(b1);
@@ -53,13 +54,13 @@ class Bubble {
 		this.r = r;
         this.xVel = random(-3,3);
         this.yVel = 0;
-        this.c =color(0, 0, random(0,360));
+        this.c =color(0, 0, 360);
 	}
 	
 	move(){
 		this.x += this.xVel;
 		//this.y += this.yVel;
-      this.xVel += random(-0.2,0.2);
+      this.xVel += random(-0.4,0.4);
       //this.yVel += random(-0.2,0.2);
       	if(this.x<0) {
 			this.x = 0;
@@ -95,7 +96,7 @@ class Circle {
 		this.y = y;
         this.xVel = random(-3,3);
         this.yVel = 0;
-        this.c =color(0, 0, random(0,360));
+        this.c =color(0, 0, 0);
         this.vNnum = vNnum;
         this.nm = nm;
         this.sm = sm;
@@ -105,7 +106,7 @@ class Circle {
 	move(){
 		this.x += this.xVel;
 		//this.y += this.yVel;
-      this.xVel += random(-0.2,0.2);
+      this.xVel += random(-0.3,0.3);
       //this.yVel += random(-0.2,0.2);
       	if(this.x<0) {
 			this.x = 0;
@@ -140,4 +141,8 @@ class Circle {
 	endShape();
 	pop();
 }
+
 }
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+  }
