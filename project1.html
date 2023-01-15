@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header>
+        <section class="hbody">
+          <article class="nav">
+          <ul id="menu">
+            <li><a href="./index2.html">About/CV</a></li>
+            <li><a href="./index3.html">Projects</a></li>
+            <li><a href="https://www.instagram.com/yewon.calli/">Instagram</a></li>
+          </ul>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fas fa-bars"></i>
+          </article>
+        </section>
+      </header>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style3.css">
+    
+</head>
+<style>
+    * {font-family: ‘SUIT’, sans-serif;
+    cursor:move;}
+    .cursor_L {cursor: default, auto !important}
+    .cursor_R {cursor: url(/images/all-directions.png), auto !important}
+</style>
+<body>
+    <div class="info">
+        <p>Draw the Beat!</p>
+    </div>
+    <div class="page">
+    <div class="left">왼쪽</div>
+    <div class="right">오른쪽</div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+        $(document).mousemove(function(e){
+
+            var htmlWidth = $('html').width();
+            var num = Number(htmlWidth);
+            var res = parseInt(num / 2);
+
+            if(e.pageX < res){
+                $('html').addClass('cursor_R');
+                $('html').removeClass('cursor_L');
+                console.log("R");
+            }else {
+                $('html').addClass('cursor_L');
+                $('html').removeClass('cursor_R');
+            }
+        });
+    });
+    </script>
+</body>
+</html>

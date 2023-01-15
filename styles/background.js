@@ -8,6 +8,7 @@ let j=0;
 function setup() {
 	createCanvas(windowWidth, windowHeight);
     colorMode(HSB, 255,255,10);
+	
 
 } 
 
