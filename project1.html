@@ -30,13 +30,29 @@
     .cursor_R {cursor: url(/images/all-directions.png), auto !important}
 </style>
 <body>
-    <div class="info">
-        <p>Draw the Beat!</p>
-    </div>
     <div class="page">
-    <div class="left">왼쪽</div>
-    <div class="right">오른쪽</div>
+        <div class="info">
+            <p>Draw the Beat!</p>
+        </div>
+        <div class="detail">
+            <div class="left">
+                When I tried to make simple music, I had a hard time with the music programs.
+                Also, when looking at the staff, people who did not know the rules felt that they could not read or write music.
+                So, I wanted to develop a program that makes music when I draw and wanted to create a music program that can be used and enjoyed by a variety of people, including young children, the elderly, and the blind.
+                <br><br>Concept of this project is "Draw Sheet Music". Drawing in each column of the picture score fills the sound suitable for the picture.
+                I collect the image of cloud, grass,flower, sun, and water. Then match each pictures to sound. If you draw the cloud and click it, the rain drop and flower grows up. The height of the flower means the height of the sound.
+                There is recording system. If you press the r key, you can start recording.
+                <br><br>If you press the r key one more, you can end the recording.
+                Then, press the s key, you can save you music into the file. Also, program plays the recorded music to you once.
+                <br><br>사용한 프로그램 (what I used)<br>- processing <br><br>
+                <a href="https://drive.google.com/file/d/1kMoI47svhYlTDHw5LuZd69UHWPATfHwD/view?usp=sharing">아카이빙 영상 (Watch video)</a>
+            </div>
+            <div class='v-line'></div>
+            <div class="right"></div>
+        </div>
     </div>
+    <div id="dogPic"><img src="images/project1_image3.png"/></div>
+    <div id="catPic"><img src="images/project1_image4.png"/></div>
     <script type="text/javascript">
         $(document).ready(function(){
 
@@ -56,6 +72,41 @@
             }
         });
     });
+
+    var dog = document.getElementById("dogPic");
+var cat = document.getElementById("catPic");
+
+var moving = false;
+
+dog.addEventListener("mousedown", initialClick, false);
+cat.addEventListener("mousedown", initialClick, false);
+
+
+function move(e){
+
+  var newX = e.clientX - 10;
+  var newY = e.clientY - 10;
+
+  image.style.left = newX + "px";
+  image.style.top = newY + "px";
+
+  
+}
+
+function initialClick(e) {
+
+  if(moving){
+    document.removeEventListener("mousemove", move);
+    moving = !moving;
+    return;
+  }
+  
+  moving = !moving;
+  image = this;
+
+  document.addEventListener("mousemove", move, false);
+
+}
     </script>
 </body>
 </html>
