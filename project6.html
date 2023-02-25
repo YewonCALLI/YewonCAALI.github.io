@@ -32,41 +32,36 @@
 <body>
     <div class="page">
         <div class="info">
-            <p>What do you want to say?</p>
+            <p>Visualize Sound of Stadium</p>
         </div>
         <div class="detail">
             <div class="left">
-                A two dimensional representation using text is called typography. There
-                are various ways to make typography, but there are usually many static
-                typography using illustrators or Photoshop. There are many music videos
-                that are designed first and made through video editing, but this also
-                uses predetermined comments. I wanted to create typography and
-                textual art where users an d interactions become flexible.
-                <br><br>
-                Algorithms Design<br>
-                1: S pecify an empty string.<br>
-                2: make 1080*1080 size black screen.<br>
-                3: for each frame.<br>
-                4: set black screen.<br>
-                5: when the user presses the enter key, it exits the loop.<br>
-                6: for each key that user enter is come together to string.<br>
-                7: print the currently stored string to the screen.<br>
-                8: Converts the positi on of the mouse to the reference of the coordinates.<br>
-                9: Rotate by 60 equal parts of the frame per second.<br>
-                10 : Randomly gives the radius of a rotating circle orbit.<br>
-                11: Every time user get a mouse shot.<br>
-                12: The las character entered in a random size between 10 and 20 is taken from the mouse position minus 300 pixels.<br>
+                <b>Sound</b><br>
+                Yuna Kim Les Miserables<br>(No commentary, only stadium sounds)<br><br>
+
+                I wanted to express the atmosphere and music of the game scene in three dimensions. I thout it was meanigful because it was a sound that only that moument could contain.
                 
-                <br><br><br>
+                <br><br><b>Target data</b><br> The sound of the stadium is classified by frequency so that it can have a three-dimensional effect. In addition, the figure varies depending on the intensity of each frequency so that the vivid atmosphere of the field can be transmitted.
+
+                <br><br><b>Interaction</b><br> Control the volume of sound
+                You can see the different figure by the volume of sound. <br>
+                See the distance between sounds
+                You can see the distance number in screen.
+                Distance is the difference between the volume of two frequency.
+                Also, it is difference of height between two frequency blocks.<br><br>
+                
+                
                 <div class='h-line'></div>
-                <br><b>사용한 프로그램 (what I used)</b><br>❤️ processing <br><br>
+                <br><b>사용한 프로그램 (what I used)</b><br>❤️ p5.js <br><br>
             </div>
+                <div class="iframe">
+                    <iframe src="https://editor.p5js.org/yewon1135/full/z6613euLX" width="600"height="600"></iframe></div>
             <div class='v-line'></div>
             <div class="right"></div>
+            
         </div>
     </div>
-    <div id="dogPic"><img src="images/project2_image1.jpg" width="400"/></div>
-    <div id="catPic"><img src="images/project2_image2.jpg" width="300"/></div>
+
     <script type="text/javascript">
         $(document).ready(function(){
 
@@ -87,14 +82,14 @@
         });
     });
 
-var dog = document.getElementById("dogPic");
-var cat = document.getElementById("catPic");
+var newimage1 = document.getElementById("image1Pic");
+var newimage2 = document.getElementById("image2Pic");
+var newimage3 = document.getElementById("image3Pic");
 
 var moving = false;
-
-dog.addEventListener("mousedown", initialClick, false);
-cat.addEventListener("mousedown", initialClick, false);
-
+newimage1.addEventListener("mousedown", initialClick, false);
+newimage2.addEventListener("mousedown", initialClick, false);
+newimage3.addEventListener("mousedown", initialClick, false);
 
 function move(e){
 

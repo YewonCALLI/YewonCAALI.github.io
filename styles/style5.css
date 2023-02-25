@@ -1,0 +1,211 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background:white;
+    
+}
+.page{
+    position: absolute;
+    width:94%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 1%;
+}
+.detail{
+  position: relative;
+  width:100%;
+  height: 100%;
+  top:130px;
+}
+.left {
+  position: relative;
+  width: 50%;
+  float: left;
+  font-size: 18px;
+  box-sizing: border-box;
+  padding-right: 2%;
+}
+.right {
+  position: relative;
+  width: 50%;
+  float: right;
+  box-sizing: border-box;
+}
+.info{
+position: absolute;
+color : black;
+top:3%;
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+user-select:none
+}
+
+.iframe{
+  position: absolute;
+  height:50%;
+  top:0%;
+  left:52%;
+
+}
+
+.info p{
+font-size: 64px;
+font-family: SUIT;
+margin: 0px 0px;
+}
+
+.h-line{
+  position: relative;
+  border-top : dashed #3d3e3e;
+  top:10px;
+  width : 100%;
+}
+
+.v-line {
+position: relative;
+border-left : dashed #3d3e3e;
+left : 50%;
+height : 50em;
+width:1em;
+margin-left: 0em;
+margin-bottom: 10em;
+
+}
+
+#dogPic{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 1%;
+  border-color: black;
+  top: 15%;
+  left: 58%;
+}
+
+#catPic{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 1%;
+  border-color: black;
+  top: 65%;
+  left: 55%;
+}
+
+#imagePic{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 1%;
+  border-color: black;
+  top: 45%;
+  left: 55%;
+}
+
+#image1Pic{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 1%;
+  border-color: black;
+  top: 20%;
+  left: 55%;
+}
+
+#image2Pic{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 1%;
+  border-color: black;
+  top: 45%;
+  left: 55%;
+}
+
+#image3Pic{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 1%;
+  border-color: black;
+  top: 70%;
+  left: 55%;
+}
+  
+
+
+
+
+a {
+    text-decoration: none;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  .hbody {
+    background-color: black;
+    width: 100%;
+    height: 45px;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  .title {
+    font-size: 10px;
+  }
+  
+  .title > a {
+    color: white;
+  }
+
+  @media screen and (min-width: 625px) {
+
+    #menu {
+      display: flex;
+    }
+  
+    #menu > li {
+      padding: 0px 25px;
+      font-size: 15px;
+    }
+  
+    li > a {
+      color: white;
+    }
+  
+    .fab {
+      font-size: 35px;
+      color: #1DA1F2;
+    }
+  
+    .fas {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 625px) {
+
+    .nav {
+      padding: 10px 10px;
+    }
+  
+    #menu {
+      display: none;
+    }
+  
+    .fab {
+      display : none;
+    }
+  
+    .fas {
+      font-size: 2em;
+    }
+  }
