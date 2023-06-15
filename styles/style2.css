@@ -29,10 +29,39 @@ canvas {
   margin: 0px 0px;
 }
 
+.info2{
+  position: absolute;
+  color : black;
+  left:30px;
+  top:110%;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+
+.info2 p{
+  font-size: 64px;
+  font-family: SUIT;
+  margin: 0px 0px;
+}
+
 .image_gallery{
   position: absolute;
   left:20%;
   top:18%;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+	gap: 20px;
+
+}
+
+.image_gallery2{
+  position: absolute;
+  left:20%;
+  top:118%;
   display:grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);

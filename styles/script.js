@@ -6,7 +6,7 @@ const SEGMENTS = 200;
 let j=0;
 
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+	createCanvas(windowWidth, windowHeight-75);
   //colorMode(HSB, 255,255,10);
 	
 
@@ -27,8 +27,8 @@ function draw() {
 
     fill("#D9D9D9");
     while(j<5){
-    let b1 = new Bubble(random(width),random(height),10);
-    let c1 = new Circle(random(width),random(height),random(5,18),random(20,60),15,100);
+    let b1 = new Bubble(random(width),random(height*2),10);
+    let c1 = new Circle(random(width),random(height*2),random(5,18),random(20,60),15,100);
     bubbles.push(b1);
     circles.push(c1);
     j++;
@@ -143,5 +143,5 @@ class Circle {
 
 }
 function windowResized() {
-	resizeCanvas(windowWidth, windowHeight);
+	resizeCanvas(windowWidth, windowHeight-75);
   }
