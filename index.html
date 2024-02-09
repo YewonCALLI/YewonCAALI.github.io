@@ -1,34 +1,126 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <section class="hbody">
-          <article class="nav">
-          <ul id="menu">
-            <li><a href="https://yewoncalli.notion.site/Yewon-Jang-2f3019a1ca014af8b8409a81c4e62559?pvs=4">About/CV</a></li>
-            <li><a href="./index2.html">Projects</a></li>
-            <li><a href="https://www.instagram.com/yewon.calli/">Instagram</a></li>
-          </ul>
-          <i class="fab fa-twitter-square"></i>
-          <i class="fas fa-bars"></i>
-          </article>
-        </section>
-      </header>
-
 	<head>
 		<link rel="stylesheet" href="static/style.css">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
-    	<link rel="stylesheet" type="text/css" href="styles/style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <link rel="stylesheet" type="text/css" href="styles/style.css">
     </head>
 
 <body>
-    <div class="page-wrap">
-        <p>Yeahwon.zip</p>
-        <div class="info">
-            <p>Make some bubbles!</p>
-        </div>
-        <div class="background">
-        <script src="styles/background.js"></script></div>
+  <div class="navbar">
+    <div class="logo">
+        <img src="images/Group 16.svg" alt="logo">
     </div>
+    <div class="about">About</div>
+    <div class="contact">Contact</div>
+  </div>
+
+  <div class="floating image">
+    <div class="floating-image1">
+        <img src="images/Group 4.svg" width="10%">
+    </div>
+    <div class="floating-image2">
+      <img src="images/Group 4.svg" width="10%">
+    </div>
+    <div class="floating-image3">
+      <img src="images/Group 3.svg" width="10%">
+    </div>
+    <div class="floating-image4">
+      <img src="images/Ellipse 4.svg" width="3%">
+    </div>
+    <div class="floating-image5">
+      <img src="images/Ellipse 4.svg" width="3%">
+    </div>
+    <div class="floating-image6">
+      <img src="images/Ellipse 4.svg" width="3%">
+    </div>
+    <div class="floating-image7">
+      <img src="images/Ellipse 4.svg" width="3%">
+    </div>
+    <div class="floating-image8">
+      <img src="images/Ellipse 4.svg" width="3%">
+    </div>
+    <div class="floating-image9">
+      <img src="images/Ellipse 4.svg" width="3%">
+    </div>
+    <div class="floating-image10">
+      <img src="images/Group 33.svg" width="10%">
+    </div>
+    <div class="floating-image10">
+      <img src="images/Group 33.svg" width="10%">
+    </div>
+    <div class="floating-image10">
+      <img src="images/Group 33.svg" width="10%">
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="row1">
+      <a href="index2.html">
+        <div class="image1">
+          <img src="images/Group 17.svg" width="80%">
+        </div>
+      </a>
+      <a href="index3.html">
+        <div class="image2">
+          <img src="images/Group 18.svg" width="70%">
+        </div>
+      </a>  
+    </div>
+    <div class="row2">
+      <a href="index4.html">
+        <div class="image3">
+          <img src="images/Group 19.svg" width="80%">
+        </div>
+      </a>
+      <div class="image4">
+        <img src="images/Group 20.svg" width="70%">
+      </div>
+    </div>
+    <div class="row3">
+      <div class="image5">
+        <img src="images/Group 30.svg" width="70%">
+      </div>
+      <div class="image6">
+        <img src="images/Group 31.svg" width="70%">
+      </div>
+    </div>
+    <div class="row4">
+      <div class="image7">
+        <img src="images/Group 32.svg" width="70%">
+      </div>
+      <div class="image8">
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const floatingImages = document.querySelectorAll('.floating img');
+  
+      floatingImages.forEach(img => {
+        // 화면 크기에 맞게 랜덤한 시작 위치 계산
+        const randomX = Math.random() * (window.innerWidth - img.offsetWidth);
+        const randomY = Math.random() * (window.innerHeight*2.5 - img.offsetHeight);
+  
+        // 이미지의 초기 위치 설정
+        gsap.set(img, {x: randomX, y: randomY});
+  
+        // 이미지가 떠다니도록 애니메이션 적용
+        gsap.to(img, {
+          duration: 2 + Math.random() * 5, // 지속 시간을 5초에서 10초 사이로 랜덤하게 설정
+          x: "+=" + (Math.random() * 200 - 50), // x축으로 -50px에서 +50px 사이로 랜덤하게 이동
+          y: "+=" + (Math.random() * 200 - 50), // y축으로 -50px에서 +50px 사이로 랜덤하게 이동
+          repeat: -1, // 무한 반복
+          yoyo: true, // 애니메이션 반복 시 역재생
+          ease: "sine.inOut", // 애니메이션 가속도 조절
+          rotation: 0.01 // 레이어가 하드웨어 가속되도록 함
+        });
+      });
+    });
+  </script>
+  
+  
 </body>
 </html>

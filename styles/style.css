@@ -7,6 +7,128 @@ html, body {
     display: block;
   }
 
+  .navbar{
+    position: relative;
+    top:20px;
+    left: 20px;
+    width: 50%;
+    display: flex;
+    gap:32px;
+    align-items: flex-end;
+  }
+
+  .about {
+    width: 121px;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+  }
+
+  .contact{
+    width: 121px;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+  }
+
+  .page{
+    position: relative;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .row1{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    position: relative;
+  }
+  .row2{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    position: relative;
+  }
+  .row3{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    position: relative;
+  }
+
+  .row4{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    position: relative;
+  }
+
+  .image1{
+    position:relative;
+    left: 13%;
+    top: 50px;
+  }
+
+  .image2{
+    position:relative;
+    left: 15%;
+  }
+
+  .image3{
+    position:relative;
+    left: 7%;
+  }
+
+  .image4{
+    position:relative;
+    top:100px;
+    left: 10%;
+  }
+
+  .image5{
+    position: relative;
+    left: 10%;
+  }
+
+  .image6{
+    position: relative;
+    top:150px;
+  }
+
+  .image7{
+    position: relative;
+    left: 0%;
+  }
+
+  .floating img{
+    position: absolute;
+    z-index: 1;
+  }
+
+  .floating img:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px cyan) drop-shadow(0 0 20px cyan) drop-shadow(0 0 30px cyan);
+  }  
+
+  .page img:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px cyan) drop-shadow(0 0 20px cyan) drop-shadow(0 0 30px cyan);
+  }  
+
   .page-wrap {
     display:flex;
     flex-direction: column;
@@ -79,10 +201,7 @@ a {
   }
   
   .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
+    
   }
   
   .title {
