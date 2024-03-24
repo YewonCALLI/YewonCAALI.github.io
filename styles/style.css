@@ -216,7 +216,7 @@ a {
     color: white;
   }
 
-  @media screen and (min-width: 625px) {
+  /* @media screen and (min-width: 625px) {
 
     #menu {
       display: flex;
@@ -239,11 +239,45 @@ a {
     .fas {
       display: none;
     }
-  }
+
+  } */
   @media screen and (max-width: 625px) {
 
     .nav {
       padding: 10px 10px;
+    }
+
+    .logo img{
+      width: 170px;
+    }
+
+    .navbar a{
+      font-size: 0.8em;
+    }
+
+    .page{
+      gap: 40px;
+    }
+
+    .image1{
+      width: 50%;
+    }
+
+
+    .row1{
+      flex-direction: column;
+    }
+
+    .row2{
+      flex-direction: column;
+    }
+
+    .row3{
+      flex-direction: column;
+    }
+
+    .row4{
+      flex-direction: column;
     }
   
     #menu {
