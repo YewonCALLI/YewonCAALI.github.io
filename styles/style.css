@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Readex+Pro:wght@200&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
@@ -121,6 +122,11 @@ html, body {
     left: 0%;
   }
 
+  .floating image{
+    overflow: hidden;
+    width: 100%;
+  }
+
   .floating img{
     position: absolute;
     z-index: 1;
@@ -201,7 +207,7 @@ a {
     list-style-type: none;
   }
   
-  .hbody {
+  .body {
     background-color: black;
     width: 100%;
     height: 45px;
@@ -241,26 +247,46 @@ a {
     }
 
   } */
+
   @media screen and (max-width: 625px) {
 
-    .nav {
-      padding: 10px 10px;
+    .navbar {
+      gap: 12px;
+      left: 10px;
+      top: 10px;
     }
 
     .logo img{
-      width: 170px;
+      width: 190px;
     }
 
     .navbar a{
-      font-size: 0.8em;
+      font-size: 0.6em;
     }
 
     .page{
       gap: 40px;
+      width: 100%;
     }
 
     .image1{
-      width: 50%;
+      width: 70%;
+      top:0px;
+    }
+
+    .image4{
+      top: 0px;
+      width: 70%;
+    }
+
+    .image6{
+      top: 0px;
+      width: 80%;
+      left:50px;
+    }
+
+    .image7{
+      left:70px;
     }
 
 
